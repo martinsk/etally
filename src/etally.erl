@@ -34,7 +34,7 @@ list_leaderboards(Node) ->
 call_cnode(Msg, Node) ->
     {any, Node} ! {call, self(), Msg},
     receive
-	Result ->
+	{tally, Result} ->
 	    Result
     after 5000 ->
             io:fwrite("Error did not recieve message"),
