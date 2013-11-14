@@ -10,6 +10,15 @@
 send_event(Ls, LBBindings, Node) ->
     cast_cnode({event, Ls, LBBindings}, Node).
 
+-spec send_event_boostrap(Ls, LBBindings, Ts, Node) -> ok when
+      Ls         :: [binary()],
+      LBBindings :: [{binary(), binary()}],
+      Ts         :: pos_integer(),
+      Node       :: atom().
+
+send_event_bootstrap(Ls, LBBindings, Ts, Node) ->
+    cast_cnode({event_tz, Ls, LBBindings, Ts}, Node).
+
 
 -spec get_counter(Name, Node) -> ok when
       Name :: binary(),
