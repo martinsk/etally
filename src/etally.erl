@@ -11,7 +11,7 @@
 send_event(Ls, LBBindings, Node) ->
     cast_cnode({event, Ls, LBBindings}, Node).
 
--spec send_event_boostrap(Ls, LBBindings, Ts, Node) -> ok when
+-spec send_event_bootstrap(Ls, LBBindings, Ts, Node) -> ok when
       Ls         :: [binary()],
       LBBindings :: [{binary(), binary()}],
       Ts         :: pos_integer(),
