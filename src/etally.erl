@@ -1,6 +1,7 @@
 -module(etally).
 -export([send_event/3, get_counter/2,
-         get_leaderboard/3, list_leaderboards/1]).
+         get_leaderboard/3, list_leaderboards/1,
+         send_event_bootstrap/4]).
 
 -spec send_event(Ls, LBBindings, Node) -> ok when
       Ls ::  [binary()],
