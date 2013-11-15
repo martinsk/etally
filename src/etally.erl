@@ -11,6 +11,7 @@
 send_event(Ls, LBBindings, Node) ->
     cast_cnode({event, Ls, LBBindings}, Node).
 
+
 -spec send_event_bootstrap(Ls, LBBindings, Ts, Node) -> ok when
       Ls         :: [binary()],
       LBBindings :: [{binary(), binary()}],
@@ -31,6 +32,7 @@ get_counter(Name, Node) ->
 
 get_leaderboard(Name, Interval, Node) ->
     call_cnode({get_leaderboard, Name, Interval}, Node).
+
 
 list_leaderboards(Node) ->
     call_cnode({list_leaderboards}, Node).
