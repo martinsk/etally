@@ -1,7 +1,7 @@
 -module(etally).
 -export([send_event/3, get_counter/2,
          get_leaderboard/3, list_leaderboards/1,
-         send_event_bootstrap/4]).
+         send_event_bootstrap/4, order/1]).
 
 -spec send_event(Ls, LBBindings, Node) -> ok when
       Ls ::  [binary()],
@@ -28,6 +28,10 @@ send_event_bootstrap(Ls, LBBindings, Ts, Node) ->
 
 get_counter(Name, Node) ->
     call_cnode({get_counter, Name}, Node).
+
+
+order(Node) ->
+    call_cnode({order}, Node).
 
 
 get_leaderboard(Name, Interval, Node) ->
