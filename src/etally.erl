@@ -31,7 +31,7 @@ get_counter(Name, Node) ->
 
 
 order(Node) ->
-    call_cnode({order}, Node).
+    cast_cnode({order}, Node).
 
 
 get_leaderboard(Name, Interval, Node) ->
