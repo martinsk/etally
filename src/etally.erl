@@ -37,8 +37,8 @@ start(Node) ->
     cast_cnode({start}, Node).
 
 
-get_leaderboard(Name, Interval, Node) ->
-    call_cnode({get_leaderboard, Name, Interval}, Node).
+get_leaderboard(Name, Interval,Page,  Node) ->
+    call_cnode({get_leaderboard, Name, Interval, Page}, Node).
 
 
 list_leaderboards(Node) ->
