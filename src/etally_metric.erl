@@ -1,7 +1,7 @@
 -module(etally_metric).
--export([send_event/4, get_counter/2,
+-export([send_event/5, get_counter/2,
          get_leaderboard/4, list_leaderboards/1,
-         send_event_bootstrap/5]).
+         send_event_bootstrap/6]).
 
 -spec send_event(Ls, LBBindings, Percents, Payload, Node) -> ok when
       Ls         :: [binary()],
